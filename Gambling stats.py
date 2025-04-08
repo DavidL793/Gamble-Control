@@ -43,12 +43,17 @@ def FGO(budget):
     print("The chances of getting what you want is: " + str(choice) + "%")
     print("In theory you would get what you want in " + str(hypoGuarantee) + " Pulls which would be " + str(sqCost) + " Saint Quartz")
     #On Average SQ cost: 1.575 per £
-    cost = sqCost/1.575
-    print("On average that would be: £" + str(round(cost, 2)))
-    if cost >= budget:
+    Totalcost = sqCost/1.575
+    print("On average that would be: £" + str(round(Totalcost, 2)))
+    currentPulls = int(input("How many pulls worth of currency do you have? "))
+    neededSq = sqCost - (currentPulls * 3)
+    remainingCost = neededSq/1.575
+    print("You need " + str(neededSq) + "Saint quartz to hit the target which will cost around £" + str(round(remainingCost, 2)))
+    if remainingCost >= budget:
         print ("This is above your budget I don't recommend you commit to this")
     else:
         print("Go for it, Remember this is not a guarantee and just a guide")
+        print("If you decide to go beyond the math please remember not to go above your budget of £" + str(budget))
     
     
 pickGame()
