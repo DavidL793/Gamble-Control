@@ -28,7 +28,7 @@ def FGO(budget):
         if decide == "1":
             return rateUpFiveServant
         elif decide == "2":
-            return fiveServant
+            return FiveServant
         elif decide == "3":
             return SpecificFiveServant
         elif decide == "4":
