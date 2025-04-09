@@ -53,7 +53,7 @@ def FGO(budget):
         print("This is above your budget I don't recommend you commit to this")
         print("If can't contain yourself understand that I would recommend not spending on gambling for " + str(remainingCost/budget) + " months")
     else:
-        print("Go for it, Remember this is not a guarantee and just a guide")
-        print("If you decide to go beyond the math please remember not to go above your budget of £" + str(budget))
+        print("Go for it! Remember this is not a guarantee and just a guide")
+        print("If you decide to go beyond the math please remember not to go above your recommended monthly budget of £" + str(budget))
     
 pickGame()
