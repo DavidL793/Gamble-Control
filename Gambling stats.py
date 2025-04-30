@@ -118,9 +118,10 @@ def rouletteWheel(budget):
         print("Your chances of winning are: " + str(choice) + "%")
         print("In theory you should win in " + str(hypoGuarantee) + " attempts")
         moneyPerAttempt = budget/hypoGuarantee
-        print("To stay in budget you would have to spend: £" + str(moneyPerAttempt) + " per attempt")
-        print("Going beyond this will result in a net loss even if you do win")
-        print("also remember that you are not guaranteed to win within these attempts so please gamble responsibly!")
+        print("To stay in budget of " + str(budget))
+        print("you would have to spend: £" + str(round(moneyPerAttempt, 2)) + " per attempt")
+        print("Going beyond this will result in a net loss even if you do win, So please stop here")
+        print("also remember that you are not guaranteed to win within these attempts, so please gamble responsibly!")
 
 
 
