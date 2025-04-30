@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head><title>Pick Your Game</title></head>
+<body>
+<h2>Where are we going?</h2>
+<form action="/fgo" method="get">
+    <input type="hidden" name="budget" value="{{ budget }}">
+    <button type="submit">FGO</button>
+</form>
+<form action="/roulette" method="get">
+    <input type="hidden" name="budget" value="{{ budget }}">
+    <button type="submit">Roulette</button>
+</form>
+
+</body>
+</html>

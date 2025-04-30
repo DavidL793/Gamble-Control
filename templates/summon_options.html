@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head><title>Summon Options</title></head>
+<body>
+<h2>What would you like to summon?</h2>
+<form method="post">
+    <select name="summon_choice" required>
+        <option value="1">Rate Up 5★ Servant (0.8%)</option>
+        <option value="2">Any 5★ Servant (1%)</option>
+        <option value="3">Off-Rate Specific 5★ Servant (0.11%)</option>
+        <option value="4">Rate Up 5★ Craft Essence (1.4%)</option>
+    </select><br><br>
+    <label>How many pulls worth of currency do you already have?</label><br>
+    <input type="number" name="current_pulls" value="0"><br><br>
+    <button type="submit">Calculate</button>
+</form>
+</body>
+</html>

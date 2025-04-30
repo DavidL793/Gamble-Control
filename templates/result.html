@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head><title>Results</title></head>
+<body>
+<h2>Your Results</h2>
+{% if game == "roulette" %}
+<p>Chance of winning: {{ choice }}%</p>
+<p>Estimated attempts to win: {{ hypo_guarantee }}</p>
+<p>Max amount to spend per attempt to stay in your £{{ budget }} budget: <strong>£{{ money_per_attempt }}</strong></p>
+<p>Going beyond this will result in a net loss even if you do win, So please stop here</p>
+<p>Remember that you are not guaranteed to win within {{ hypo_guarantee }} attempts, so please gamble responsibly!</p>
+
+{% else %}
+<p>Chance of success: {{ choice }}%</p>
+<p>Estimated pulls: {{ hypo_guarantee|round(1) }}</p>
+<p>Estimated Saint Quartz needed: {{ sq_needed|round(1) }}</p>
+<p>Estimated cost: £{{ cost_estimate|round(2) }}</p>
+<hr>
+<p>You still need: £{{ remaining_cost|round(2) }} to reach the estimated goal.</p>
+{% if over_budget %}
+<p style="color:red;">This is above your £{{ budget }} monthly gambling budget!</p>
+<p>Consider saving for {{ months_to_wait }} month(s) instead.</p>
+{% else %}
+<p style="color:green;">You're within budget! Go for it (responsibly)!</p>
+{% endif %}
+{% endif %}
+<br>
+<a href="/">Start Over</a>
+</body>
+</html>
